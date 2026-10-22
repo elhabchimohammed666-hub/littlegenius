@@ -1,0 +1,30 @@
+{
+  "name": "littlegenius",
+  "version": "1.0.0",
+  "description": "LittleGenius - AI Learning Platform for Kids (MERN Stack Edition)",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run build --prefix client",
+    "seed": "node server/seed/seedData.js",
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client"
+  },
+  "keywords": [
+    "mern",
+    "education",
+    "ai",
+    "kids-learning",
+    "react",
+    "mongodb",
+    "express"
+  ],
+  "author": "LittleGenius Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  }
+}

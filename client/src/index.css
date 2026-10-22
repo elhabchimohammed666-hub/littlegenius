@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', 'Quicksand', system-ui, sans-serif;
+  }
+}
+
+/* Custom playful utilities */
+.kid-card {
+  @apply bg-white rounded-3xl border-2 border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-200;
+}
+
+.kid-button-primary {
+  @apply bg-gradient-to-r from-orange-400 to-amber-500 hover:from-orange-500 hover:to-amber-600 text-white font-bold rounded-2xl px-6 py-3 shadow-lg shadow-orange-500/25 active:translate-y-0.5 transition-all text-center flex items-center justify-center gap-2;
+}
+
+.kid-button-secondary {
+  @apply bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold rounded-2xl px-6 py-3 border border-indigo-200 transition-all text-center flex items-center justify-center gap-2;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

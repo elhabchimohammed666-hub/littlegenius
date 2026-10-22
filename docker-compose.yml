@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: littlegenius-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - littlegenius-net
+
+  littlegenius-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: littlegenius-app
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+    environment:
+      - PORT=5001
+      - MONGODB_URI=mongodb://mongodb:27017/littlegenius
+      - JWT_SECRET=littlegenius_super_secret_jwt_key_2026_kid_edu
+      - NODE_ENV=production
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    depends_on:
+      - mongodb
+    networks:
+      - littlegenius-net
+
+volumes:
+  mongo-data:
+
+networks:
+  littlegenius-net:
+    driver: bridge
