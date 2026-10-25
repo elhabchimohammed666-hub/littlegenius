@@ -68,18 +68,7 @@ Clone the repository and install all dependencies:
 npm run install-all
 ```
 
-### 2. Environment Configuration
-Create or inspect `server/.env`:
-```env
-PORT=5001
-MONGODB_URI=mongodb://127.0.0.1:27017/littlegenius
-JWT_SECRET=littlegenius_super_secret_jwt_key_2026_kid_edu
-NODE_ENV=development
 
-# Optional AI API Key (Gemini, Groq, or OpenAI)
-# If left empty, the built-in smart pedagogical engine is used seamlessly
-GEMINI_API_KEY=
-```
 
 ### 3. Seed Database with Demonstration Scenario
 Populate the database with the example scenario described in the project specifications:
