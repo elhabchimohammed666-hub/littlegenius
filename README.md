@@ -1,3 +1,6 @@
+## License
+   © 2026 Elhabchi Mohammed. All Rights Reserved.
+
 # LittleGenius 🦊
 ### AI Learning Platform for Kids (MERN Stack Edition)
 
